@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Single Record Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class = "background">
+
+     
+
+    <div class="login">
+	<h1>Flight Delay Prediction</h1>
+    <form action="{{ url_for('predict')}}"method="post">
+  DAY_OF_MONTH         :<input type="text" name="DAY_OF_MONTH" placeholder="DAY_OF_MONTH" required="required" />
+  DAY_OF_WEEK          :<input type="text" name="DAY_OF_WEEK" placeholder="DAY_OF_WEEK" required="required" />
+  OP_CARRIER_AIRLINE_ID: <input type="text" name="OP_CARRIER_AIRLINE_ID" placeholder="OP_CARRIER_AIRLINE_ID" required="required" />
+  ORIGIN_AIRPORT_ID    : <input type="text" name="ORIGIN_AIRPORT_ID" placeholder="ORIGIN_AIRPORT_ID" required="required" />
+  DEST_AIRPORT_ID	   : <input type="text" name="DEST_AIRPORT_ID" placeholder="DEST_AIRPORT_ID" required="required" />
+  DEP_TIME             : <input type="text" name="DEP_TIME" placeholder="DEP_TIME" required="required" />
+  ARR_TIME             : <input type="text" name="ARR_TIME" placeholder="ARR_TIME" required="required" />
+  DEP_DEL15	           : <input type="text" name="DEP_DEL15" placeholder="DEP_DEL15" required="required" />
+  DIVERTED             : <input type="text" name="DIVERTED" placeholder="DIVERTED" required="required" />
+  DISTANCE             : <input type="text" name="DISTANCE" placeholder="DISTANCE" required="required" />
+             
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict Departure Delay</button>
+    </form>
+   <br>
+   <br>
+   Arrival Delay Prediction is {{ prediction_text }}
+  <br>
+  <br>
+<a href="/chart/{{prediction_text}}"><button type="submit" class="btn btn-primary btn-block btn-large">Analysis</button></a>
+ </div>
+  
+</body>
+</html>

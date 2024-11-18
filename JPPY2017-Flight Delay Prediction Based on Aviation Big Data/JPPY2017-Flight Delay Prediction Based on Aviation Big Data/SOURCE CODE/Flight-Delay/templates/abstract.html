@@ -1,0 +1,56 @@
+ <html>
+<head>
+<style>
+ 
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: blue;
+}
+
+p {
+  text-indent: 50px;
+  text-align: justify;
+  letter-spacing: 3px;
+}
+ .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+  
+</style>
+</head>
+<body>
+
+<div>
+  <h1>Abstract</h1>
+  <p>Accurate flight delay prediction is fundamental to
+establish the more efficient airline business. Recent studies have
+been focused on applying machine learning methods to predict
+the flight delay. Most of the previous prediction methods are conducted in a single route or airport. This paper explores a broader
+scope of factors which may potentially influence the flight delay,
+and compares several machine learning-based models in designed
+generalized flight delay prediction tasks. To build a dataset
+for the proposed scheme, automatic dependent surveillancebroadcast (ADS-B) messages are received, pre-processed, and
+integrated with other information such as weather condition,
+flight schedule, and airport information. The designed prediction
+tasks contain different classification tasks and a regression task.
+Experimental results show that long short-term memory (LSTM)
+is capable of handling the obtained aviation sequence data, but
+overfitting problem occurs in our limited dataset. Compared with
+the previous schemes, the proposed random forest-based model
+can obtain higher prediction accuracy (90.2% for the binary
+classification) and can overcome the overfitting problem. </P>
+  
+</div>
+ <input type="button" class= "button"onclick="window.location.href='{{url_for('upload')}}';" value="NEXT" />
+</body>
+</html>

@@ -1,0 +1,56 @@
+ <html>
+<head>
+<style>
+ 
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: red;
+}
+
+p {
+  text-indent: 50px;
+  text-align: justify;
+  letter-spacing: 3px;
+}
+ .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+ 
+</style>
+</head>
+<body>
+
+<div>
+  <h1>Conclusion and Future Work</h1>
+  <p>In this paper, random forest-based and LSTM-based architectures have been implemented to predict individual flight
+delay. The experimental results show that the random forestbased method can obtain good performance for the binary
+classification task and there are still room for improving
+the multi-categories classification tasks. The LSTM-based
+architecture can obtain relatively higher training accuracy,
+which suggests that the LSTM cell is an effective structure
+to handle time sequences. However, the overfitting problem
+occurred in the LSTM-based architecture still needs to be
+solved. In summary, the random forest-based architecture
+presented better adaptation at a cost of the training accuracy
+when handling the limited dataset. In order to overcome the
+overfitting problem and to improve the testing accuracy for
+multi-categories classification tasks, our future work will focus
+on collecting or generating more training data, integrating
+more information like airport traffic flow, airport visibility into
+our dataset, and designing more delicate networks.</P>
+ 
+  
+</div>
+ <input type="button" class="button" onclick="window.location.href='{{url_for('index')}}';" value="HOME" />
+</body>
+</html>
